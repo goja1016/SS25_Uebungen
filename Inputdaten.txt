@@ -1,0 +1,14 @@
+Kunden
+Roger Federer
+Rafael Nadal
+Franz Beckenbauer
+
+Automarken
+Jeep
+Chrysler
+Rolls-Royce
+
+Kennzeichen
+KA-SC-1100
+KA-SC-1101
+KA-SC-1102
