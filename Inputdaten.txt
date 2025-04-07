@@ -1,0 +1,14 @@
+Kunden
+Lionel Messi
+Serena Williams
+Michael Jordan
+
+Automarken
+Nissan
+Hyundai
+Kia
+
+Kennzeichen
+KA-GC-1020
+KA-GC-1021
+KA-GC-1022
