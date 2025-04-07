@@ -1,0 +1,14 @@
+Kunden
+Charles Darwin
+Galileo Galilei
+Nikola Tesla
+
+Automarken
+Volkswagen
+Porsche
+Opel
+
+Kennzeichen
+KA-AS-1011
+KA-AS-1012
+KA-AS-1013
