@@ -1,0 +1,14 @@
+Kunden
+Johnny Depp
+Natalie Portman
+Robert DeNiro
+
+Automarken
+Land Rover
+Ferrari
+Lamborghini
+
+Kennzeichen
+KA-HC-1041
+KA-HC-1042
+KA-HC-1043
