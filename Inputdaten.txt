@@ -1,0 +1,14 @@
+Kunden
+Muhammad Ali
+Cristiano Ronaldo
+Simone Biles
+
+Automarken
+Subaru
+Mazda
+Mitsubishi
+
+Kennzeichen
+KA-ZF-1014
+KA-ZF-1015
+KA-ZF-1016
