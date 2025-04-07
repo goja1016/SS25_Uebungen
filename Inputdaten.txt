@@ -1,0 +1,14 @@
+Kunden
+Meryl Streep
+Leonardo DiCaprio
+Cate Blanchett
+
+Automarken
+Maserati
+Bugatti
+Alfa Romeo
+
+Kennzeichen
+KA-MH-1019
+KA-MH-1020
+KA-MH-1021
