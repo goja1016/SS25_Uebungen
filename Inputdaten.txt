@@ -1,0 +1,14 @@
+Kunden
+Albert Einstein
+Marie Curie
+Isaac Newton
+
+Automarken
+Audi
+BMW
+Mercedes-Benz
+
+Kennzeichen
+KA-BP-1020
+KA-BP-1021
+KA-BP-1022
