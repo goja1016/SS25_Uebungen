@@ -1,0 +1,14 @@
+Kunden
+Christoph Kolumbus
+Marco Polo
+Ferdinand Magellan
+
+Automarken
+Mazda
+Mitsubishi
+Jeep
+
+Kennzeichen
+KA-SL-1056
+KA-SL-1057
+KA-SL-1058
