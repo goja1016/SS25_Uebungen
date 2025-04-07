@@ -1,0 +1,14 @@
+Kunden
+Ada Lovelace
+Carl Sagan
+Rosalind Franklin
+
+Automarken
+Ford
+Toyota
+Honda
+
+Kennzeichen
+KA-GM-1012
+KA-GM-1013
+KA-GM-1014
