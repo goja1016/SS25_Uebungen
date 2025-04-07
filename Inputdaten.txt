@@ -1,0 +1,14 @@
+Kunden
+Marlon Brando
+Marilyn Monroe
+Tom Hanks
+
+Automarken
+Subaru
+Mazda
+Mitsubishi
+
+Kennzeichen
+KA-PJ-1011
+KA-PJ-1012
+KA-PJ-1013
