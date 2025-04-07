@@ -1,0 +1,14 @@
+Kunden
+Roald Amundsen
+Jacques Cousteau
+David Livingstone
+
+Automarken
+Jeep
+Chrysler
+Rolls-Royce
+
+Kennzeichen
+KA-PJ-1015
+KA-PJ-1016
+KA-PJ-1017
