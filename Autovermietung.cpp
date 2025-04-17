@@ -8,6 +8,8 @@ int main()
     std::cout << "Hello World!\n";
 }
 
+
+//test
 // Programm ausführen: STRG+F5 oder "Debuggen" > Menü "Ohne Debuggen starten"
 // Programm debuggen: F5 oder "Debuggen" > Menü "Debuggen starten"
 
