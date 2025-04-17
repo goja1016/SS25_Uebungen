@@ -1,0 +1,14 @@
+Kunden
+Mats Hummels
+James Bond
+Helmut Kohl
+
+Automarken
+Volvo
+Mercedes
+Audi
+
+Kennzeichen
+KA-HM-1014
+KA-HM-1015
+KA-HM-1016
