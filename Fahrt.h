@@ -7,9 +7,9 @@ using namespace std;
 class Fahrt
 {
 private:
+	int BNr = 0;
 	int Beginn = 0;
 	int Ende = 0;
-	int BNr = 0;
 	string Kunde;
 
 public:

@@ -39,6 +39,7 @@ void Vermietung::dialog()
     int Beginn = 0;
     int Ende = 0;
     int BNr = 0;
+    int dir = 0;
     while(Fuhrpark.size() == 0)
     {
         try
@@ -51,7 +52,7 @@ void Vermietung::dialog()
             cin >> in;
             Sitze = stoi(in)>0 ? stoi(in) : 4;
             addFahrzeug(new Mietwagen(Marke, Kennzeichen, Sitze));
-            cout << "Fahrzeug erfolgreich finzugefuegt\n";
+            cout << "Fahrzeug erfolgreich hinzugefuegt\n";
             Fuhrpark.at(getFahrzeug(Kennzeichen))->printFahrzeug();
         }
         catch (exception)
@@ -97,9 +98,11 @@ void Vermietung::dialog()
                     break;
                 }
                 cout << "Beginn: ";
-                cin >> Beginn;
+                cin >> in;
+                Beginn = stoi(in);
                 cout << "Ende: ";
-                cin >> Ende;
+                cin >> in;
+                Ende = stoi(in);
                 cout << "Kunde: ";
                 cin >> Kunde;
                 Fuhrpark.at(getFahrzeug(Kennzeichen))->anmieten(Fahrt(Beginn, Ende, BNr, Kunde));
@@ -116,7 +119,8 @@ void Vermietung::dialog()
                 }
                 Fuhrpark.at(getFahrzeug(Kennzeichen))->printFahrzeug();
                 cout << "Buchungsnummer: ";
-                cin >> BNr;
+                cin >> in;
+                BNr = stoi(in);
                 Fuhrpark.at(getFahrzeug(Kennzeichen))->fahrtAnzeigen(BNr);
                 break;
 
@@ -128,8 +132,12 @@ void Vermietung::dialog()
                     cout << "Kein Fahrzeug mit diesem Kennzeichen";
                     break;
                 }
+                cout << "0: Aufsteigend\n1: Absteigend\n";
+                cin >> in;
+                dir = stoi(in);
                 Fuhrpark.at(getFahrzeug(Kennzeichen))->printFahrzeug();
-                Fuhrpark.at(getFahrzeug(Kennzeichen))->alleFahrtenAnzeigen();
+                Fuhrpark.at(getFahrzeug(Kennzeichen))->alleFahrtenAnzeigen(dir);
+                break;
 
             case 3:
                 cout << "\nKennzeichen eingeben\n";
@@ -141,7 +149,8 @@ void Vermietung::dialog()
                 }
                 Fuhrpark.at(getFahrzeug(Kennzeichen))->printFahrzeug();
                 cout << "Buchungsnummer: ";
-                cin >> BNr;
+                cin >> in;
+                BNr = stoi(in);
                 if (!Fuhrpark.at(getFahrzeug(Kennzeichen))->fahrtLoeschen(BNr))
                 {
                     cout << "Buchungsnummer nicht vorhanden\n";
@@ -170,13 +179,26 @@ void Vermietung::dialog()
                 break;
 
             case 5:
-                for (Mietwagen* mietwagen : Fuhrpark)
+                cout << "0: Aufsteigend\n1: Absteigend\n";
+                cin >> in;
+                dir = stoi(in);
+                Fuhrpark.at(0)->insertionSort(Fuhrpark);
+                if (dir)
                 {
-                    mietwagen->printFahrzeug();
-                    mietwagen->alleFahrtenAnzeigen();
-                    cout << endl;
+                    for (int i = Fuhrpark.size(); i > 0; i--)
+                    {
+                        Fuhrpark.at(i - 1)->printFahrzeug();
+                        Fuhrpark.at(i - 1)->alleFahrtenAnzeigen(dir);
+                    }
                 }
-                break;
+                else
+                {
+                    for (int i = 0; i < Fuhrpark.size(); i++)
+                    {
+                        Fuhrpark.at(i)->printFahrzeug();
+                        Fuhrpark.at(i)->alleFahrtenAnzeigen(dir);
+                    }
+                }
                 break;
 
             default:

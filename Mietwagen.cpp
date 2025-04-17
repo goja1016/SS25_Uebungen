@@ -17,12 +17,27 @@ void Mietwagen::printFahrzeug()
 	cout << Marke.c_str() << ": " << Kennzeichen.c_str() << "\n" << "Sitze: " << Sitze << "\n";
 }
 
-void Mietwagen::alleFahrtenAnzeigen()
+void Mietwagen::alleFahrtenAnzeigen(int dir)
 {
-	cout << "\n";
-	for (Fahrt fahrt : Fahrtenbuch)
+	if (!Fahrtenbuch.size())
 	{
-		fahrt.anzeigen();
+		cout << "Keine Fahrten\n";
+		return;
+	}
+	insertionSort(Fahrtenbuch);
+	if (dir)
+	{
+		for (int i = Fahrtenbuch.size(); i > 0; i--)
+		{
+			Fahrtenbuch.at(i - 1).anzeigen();
+		}
+	}
+	else
+	{
+		for (int i = 0; i < Fahrtenbuch.size(); i++)
+		{
+			Fahrtenbuch.at(i).anzeigen();
+		}
 	}
 }
 
@@ -38,7 +53,7 @@ void Mietwagen::anmieten(Fahrt fahrt)
 	Fahrtenbuch.push_back(fahrt);
 }
 
-string& Mietwagen::getKennzeichen()
+string Mietwagen::getKennzeichen()
 {
 	return Kennzeichen;
 }
@@ -98,4 +113,32 @@ int Mietwagen::verfuegbarkeitPruefen(Fahrt fahrt)
 		valid &= !(fahrt.getBeginn() > fahrt.getEnde());
 	}
 	return valid ? -1 : i - 1;
+}
+
+
+void Mietwagen::insertionSort(vector<Fahrt> &object)
+{
+	for (int j,i = 1; i < object.size(); i++)
+	{
+		Fahrt buffer = object.at(i);
+		for (j = i; j > 0; j--)
+		{
+			if (object.at(j - 1).getBNr() < buffer.getBNr())break;
+			object.at(j) = object.at(j - 1);
+		}
+		object.at(j) = buffer;
+	}
+}
+void Mietwagen::insertionSort(vector<Mietwagen*> &object)
+{
+	for (int j, i = 1; i < object.size(); i++)
+	{
+		Mietwagen* buffer = object.at(i);
+		for (j = i; j > 0; j--)
+		{
+			if (object.at(j - 1)->getKennzeichen() < buffer->getKennzeichen())break;
+			object.at(j) = object.at(j - 1);
+		}
+		object.at(j) = buffer;
+	}
 }
