@@ -1,0 +1,14 @@
+Kunden
+Bill Gates
+Steve Jobs
+Harald Schmidt
+
+Automarken
+Seat
+Opel
+VW
+
+Kennzeichen
+KA-ST-1014
+KA-ST-1015
+KA-ST-1016
